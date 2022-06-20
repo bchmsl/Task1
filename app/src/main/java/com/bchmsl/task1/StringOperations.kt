@@ -9,11 +9,8 @@ class StringOperations {
     }
 
     fun getReversed(string: String): String {
-        var stringList = string.split("")
-        d("TAG", "$stringList")
-        stringList = stringList.asReversed()
-        d("TAG", stringList.joinToString(""))
-        return stringList.joinToString("")
+        return string.reversed()
+
     }
 
     fun isPalindrome(string: String): Boolean {
