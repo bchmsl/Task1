@@ -59,18 +59,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnGetPalindrome.setOnClickListener {
-//            if (!checkString(etString)) {
+            if (checkString(etString)) {
                 binding.tvResultString.text =
                     stringOperations.isPalindrome(etString.text.toString()).toString()
-//            }
+            }
         }
 
         binding.btnGetNumberReversed.setOnClickListener {
-//            if (!checkString(etString)) {
+            if (checkString(etString)) {
                 val reversed = stringOperations.getReversed(etString.text.toString())
 
                 binding.tvResultString.text = reversed
-//            }
+            }
         }
 
         binding.btnSumAllEven.setOnClickListener {
