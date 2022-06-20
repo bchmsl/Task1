@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNumber1"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:hint="Num1"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/etNumber2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNumber2"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:hint="Num2"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/etNumber1"
+        app:layout_constraintTop_toTopOf="@id/etNumber1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGCD"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="GCD"
+        app:layout_constraintEnd_toStartOf="@id/btnLCM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumber1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLCM"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="LCM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnGCD"
+        app:layout_constraintTop_toBottomOf="@id/etNumber2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResultMath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/btnLCM"
+        app:layout_constraintStart_toStartOf="@id/btnGCD"
+        app:layout_constraintTop_toBottomOf="@id/btnGCD"
+        tools:text="Lorem Ipsum Dolor Set Amet" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvResultMath" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etStringInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="Provide String Here"
+        app:layout_constraintEnd_toEndOf="@id/tvResultMath"
+        app:layout_constraintStart_toStartOf="@id/tvResultMath"
+        app:layout_constraintTop_toBottomOf="@id/tvResultMath" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDollar"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Find Dollar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnGetNumberReversed"
+        app:layout_constraintTop_toBottomOf="@id/etStringInput" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetNumberReversed"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/btnDollar"
+        app:layout_constraintEnd_toStartOf="@id/btnGetPalindrome"
+        android:text="Get Reversed"
+        app:layout_constraintTop_toBottomOf="@id/etStringInput" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetPalindrome"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Palindrome"
+        app:layout_constraintStart_toEndOf="@id/btnGetNumberReversed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etStringInput" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResultString"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/btnGetPalindrome"
+        app:layout_constraintStart_toStartOf="@id/btnDollar"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetNumberReversed"
+        tools:text="Lorem Ipsum Dolor Set Amet" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvResultString" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSumAllEven"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:text="sum even"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvResultSumEven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnSumAllEven"
+        app:layout_constraintStart_toEndOf="@id/btnSumAllEven"
+        app:layout_constraintTop_toTopOf="@id/btnSumAllEven"
+        tools:text="Lorem Ipsum Dolor Set Amet" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
