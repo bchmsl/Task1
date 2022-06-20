@@ -1,7 +1,5 @@
 package com.bchmsl.task1
 
-import android.util.Log.d
-
 class StringOperations {
 
     fun containsDollar(string: String): Boolean {
